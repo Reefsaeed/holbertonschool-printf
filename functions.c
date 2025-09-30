@@ -1,9 +1,13 @@
 #include "main.h"
-/* Placeholder for %c */
-int print_char(va_list args)
+/**
+* _putchar - writes a single character
+* @c: character to write
+*
+* Return: 1 on success
+*/
+int _putchar(char c)
 {
-/* TODO: implement %c */
-return (0);
+return (write(1, &c, 1));
 }
 /* Placeholder for %s */
 int print_string(va_list args)
