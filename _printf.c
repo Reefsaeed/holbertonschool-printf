@@ -12,7 +12,33 @@ va_list args;
 if (format == NULL)
 return (-1);
 va_start(args, format);
-/* TODO: implement parsing of format string and call specifier functions */
+while (*format)
+{
+    if (*format == '%')
+    {
+        format++;
+
+        if (*format == '\0')
+            return (-1);
+
+        if (*format == 'c')
+            count += _putchar(va_arg(args, int));
+        else if (*format == 's')
+            count += print_string(args);
+        else if (*format == '%')
+            count += _putchar('%');
+        else
+        {
+            count += _putchar('%');
+            count += _putchar(*format);
+        }
+    }
+    else
+    {
+        count += _putchar(*format);
+    }
+    format++;
+}
 va_end(args);
 return (count);
 }
