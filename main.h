@@ -23,5 +23,6 @@ int print_HEX(va_list args);
 int _strlen(char *s);
 int _pow(int base, int exp);
 char *convert_to_base(unsigned int num, int base, int uppercase);
+int print_number(int n);
 
 #endif
