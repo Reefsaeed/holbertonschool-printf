@@ -18,16 +18,17 @@ return (write(1, &c, 1));
 int print_string(va_list args)
 {
 
-char *str = va_arg(args, char*);
-int i = 0;
-if (str == NULL)
-    str = "(null)";
+	char *str = va_arg(args, char*);
+	int i = 0;
 
-while (str[i])
-{
-    write(1, &str[i], 1);
-    i++;
-}
+	if (str == NULL)
+	str = "(null)";
+
+	while (str[i])
+	{
+	write(1, &str[i], 1);
+	i++;
+	}
 
 return (i);
 }
