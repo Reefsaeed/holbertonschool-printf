@@ -9,7 +9,12 @@ int _putchar(char c)
 {
 return (write(1, &c, 1));
 }
-/* Placeholder for %s */
+/**
+ * print_string - Prints a string to stdout.
+ * @args: The list of arguments pointing to the string to print.
+ *
+ * Return: Number of characters printed (excluding null byte).
+ */
 int print_string(va_list args)
 {
 
@@ -25,10 +30,4 @@ while (str[i])
 }
 
 return (i);
-}
-/* Placeholder for %% */
-int print_percent(va_list args)
-{
-/* TODO: implement %% */
-return (0);
 }
