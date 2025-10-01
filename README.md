@@ -1,3 +1,6 @@
-# Holbertonschool printf
-I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
-# holbertonschool-printf
+# _printf - Custom printf Implementation
+
+This project is a custom implementation of the printf function in C, recreated from scratch as part of the Holberton School curriculum.
+
+## Description
+The `_printf` function produces output according to a format string and returns the number of characters printed (excluding the null byte used to end output to strings). This implementation handles the basic conversion specifiers required for the project.
