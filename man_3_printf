@@ -29,6 +29,21 @@ Print a signed decimal integer.
 .TP
 .B %i
 Same as %d.
+.TP
+.B %b
+Print an unsigned binary number.
+.TP
+.B %u
+Print an unsigned integer.
+.TP
+.B %o
+Print an unsigned octal number.
+.TP
+.B %x
+Print a lowercase hexadecimal.
+.TP
+.B %X
+Print an uppercase hexadecimal.
 
 If format is NULL or ends with an incomplete specifier, the function returns -1.
 .SH RETURN VALUE
@@ -36,12 +51,16 @@ Returns the number of characters printed (excluding the null byte).
 Returns -1 on error.
 .SH EXAMPLES
 .nf
-_printf("Hello %s\\n", "Nawaf and Reef");
-_printf("Value: %d\\n", 123);
-_printf("Percent: %%\\n");
+_printf("Hello %s\n", "Nawaf and Reef");
+_printf("Value: %d\n", 123);
+_printf("Percent: %%\n");
+_printf("Binary: %b\n", 9);
+_printf("Unsigned: %u\n", 3000000000);
+_printf("Octal: %o\n", 100);
+_printf("Hex lower: %x\n", 255);
+_printf("Hex upper: %X\n", 255);
 .fi
 .SH SEE ALSO
 printf(3), write(2), va_start(3), va_arg(3), va_end(3)
 .SH AUTHOR
 Written by Nawaf Saleh Alzahrani and Reef Saeed Alqahtani.
-
